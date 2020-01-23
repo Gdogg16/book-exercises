@@ -41,7 +41,11 @@ num_itmes <- lapply(meals, length)
 print(num_itmes)
 # Write a function `add_pizza` that adds pizza to a given meal vector, and
 # returns the pizza-fied vector
-
+add_pizza <- function(meal_vector) {
+  new_vector <- c(meal_vector, "pizza")
+    return(new_vector)
+}
+  add_pizza("nachos")
 
 # Create a vector `better_meals` that is all your meals, but with pizza!
-
+lapply(meals, add_pizza)
