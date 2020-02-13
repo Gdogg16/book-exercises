@@ -1,0 +1,30 @@
+---
+title: "R Markdown Demo"
+author: "Sean"
+date: "2/11/2020"
+output: html_document
+---
+This is my report. I somewhat enjoy writing reports!
+
+
+``` {r example, include = FALSE}
+library("knitr")
+numbers <- runif(1:100)
+hist(numbers)
+numbers_mean <- mean(numbers)
+
+img_url <- "https://www.google.com/search?q=puppies&rlz=1C1EJFA_enUS760US760&sxsrf=ACYBGNRM52fCrKjMYjNDnXKCEJPjBZlxpw:1581462249873&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjpiIT9zcrnAhXXuZ4KHWOQAjMQ_AUoAXoECA8QAw&biw=1500&bih=858#imgrc=ViMExjyRZrsJzM)"
+
+img_markdown <- paste0("![puppies](", img_url, ")")
+print(img_markdown)
+```
+
+
+```{r other_chunk}
+
+print(numbers)
+
+```
+
+The mean of the numbers happens to be `r numbers_mean`
+
